@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: coupon-consumer
+server:
+  port: 8081
