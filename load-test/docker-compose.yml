@@ -6,10 +6,10 @@ services:
       - "8089:8089"
     volumes:
       - ./:/mnt/locust
-    command: -f /mnt/locust/locustfile-hello.py --master -H http://host.docker.internal:8080
+    command: -f /mnt/locust/locustfile-issueV1.py --master -H http://host.docker.internal:8080
 
   worker:
     image: locustio/locust
     volumes:
       - ./:/mnt/locust
-    command: -f /mnt/locust/locustfile-hello.py --worker --master-host master
+    command: -f /mnt/locust/locustfile-issueV1.py --worker --master-host master
